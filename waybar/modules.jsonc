@@ -1,0 +1,347 @@
+{
+  // ═══════════════════════════════════════════════════════════════════════════
+  // HYPRLAND
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": false,
+
+    "persistent-workspaces": {
+      "*": 5
+    },
+
+    "format-icons": {
+      "1": "󰊠",
+      "2": "󰊠",
+      "3": "󰊠",
+      "4": "󰊠",
+      "5": "󰊠"
+    }
+  },
+  "custom/icon": {
+    "format": "",
+    "tooltip": "Applications",
+    "on-click": "rofi -show drun"
+  },
+
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 60,
+    "separate-outputs": false,
+
+    "rewrite": {
+      "^.*( — Zen Browser|Zen Browser)$": "󰈹 Zen",
+      "^.*( — Firefox|Firefox)$": "󰈹 Firefox",
+      "^.*( — Brave|Brave)$": " Brave",
+      "^.*( — Chromium|Chromium)$": "󰈹 Chromium",
+      "^.*v( .*|$)": " Neovim",
+      "^.*~$": "󰄛 Kitty",
+      "^.*(- Spotify|Spotify)$": "󰏤 Spotify",
+      "^.*(- Code|Code)$": "󰈹 VSCode",
+      "^.*(- Cursor|Cursor)$": "󰈹 Cursor"
+    }
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CLOCK
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A %d.%m}",
+
+    "tooltip-format": "<tt><big>{calendar}</big></tt>",
+
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+
+  "clock#date": {
+    "format": "󰃭 {:%d/%m/%Y}",
+    "tooltip": false
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // DRAWER ARROWS
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "custom/pc-drawer": {
+    "format": ">",
+    "tooltip": "PC resources"
+  },
+
+  "custom/system-drawer": {
+    "format": "&lt;",
+    "tooltip": "System controls"
+  },
+
+  "custom/music-prev": {
+    "format": "&lt;",
+    "tooltip": false
+  },
+
+  "custom/music-next": {
+    "format": ">",
+    "tooltip": false
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // MUSIC
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "custom/playerlabel": {
+    "format": "{}",
+    "return-type": "json",
+    "max-length": 50,
+    "exec": "playerctl metadata --format '{\"text\":\"{{artist}} : {{markup_escape(title)}}\",\"tooltip\":\"{{playerName}} : {{markup_escape(title)}}\",\"alt\":\"{{status}}\"}' -F",
+    "on-click": "playerctl play-pause",
+    "tooltip": true
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PC RESOURCE DRAWER
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "group/pc": {
+    "orientation": "inherit",
+
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": true
+    },
+
+    "modules": [
+      "custom/pc-drawer",
+      "cpu",
+      "memory",
+      "disk",
+      "custom/updates"
+    ]
+  },
+
+  "cpu": {
+    "format": "󰘚 {usage}%"
+  },
+
+  "memory": {
+    "format": " {percentage}%"
+  },
+
+  "disk": {
+    "interval": 600,
+    "format": "󰆼 {percentage_used}%",
+    "path": "/"
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // SYSTEM DRAWER
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "group/system": {
+    "orientation": "inherit",
+
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+
+    "modules": [
+      "custom/system-drawer",
+      "pulseaudio",
+      "pulseaudio#mic",
+      "network",
+      "bluetooth"
+    ]
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "󰖁",
+
+    "tooltip": false,
+
+    "format-icons": {
+      "headphones": "󰋌",
+      "handsfree": "󰋌",
+      "headset": "󰋌",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "on-click-middle": "pavucontrol",
+
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+
+    "smooth-scrolling-threshold": 1
+  },
+
+  "network": {
+    "format": "{icon}",
+
+    "format-icons": {
+      "wifi": [
+        "󰤨"
+      ],
+      "ethernet": [
+        "󰈁"
+      ],
+      "disconnected": [
+        ""
+      ]
+    },
+
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈁",
+    "format-disconnected": "󰖪",
+
+    "interval": 5,
+
+    "tooltip": true,
+    "tooltip-format": "{ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) \n{ipaddr} | {frequency} MHz",
+    "tooltip-format-ethernet": "{ifname} 󰈀\n{ipaddr}",
+    "tooltip-format-disconnected": "Not connected",
+
+    "on-click": "~/.config/waybar/scripts/network.sh"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-on": "",
+    "format-off": "󰂲",
+    "format-disabled": "",
+    "format-connected": "",
+
+    "tooltip": false,
+
+    "on-click": "bash ~/.config/rofi/bluetooth/bluetooth.sh"
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // INTERNET SPEED
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "network#speed": {
+    "format": "󰇚 {bandwidthDownBits}",
+    "interval": 5,
+    "tooltip": false
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // TODO
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "custom/todo": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/todo.sh",
+    "interval": 5,
+    "on-click": "~/.config/waybar/scripts/todo.sh menu"
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // POMODORO
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "custom/pomodoro": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/pomodoro.sh",
+    "interval": 1,
+
+  "on-click": "~/.config/waybar/scripts/pomodoro.sh click",
+  "on-click-right": "~/.config/waybar/scripts/pomodoro.sh reset",
+
+    "tooltip": false
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // MICROPHONE
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "pulseaudio#mic": {
+    "format": "󰍬",
+    "format-muted": "󰍭",
+    "tooltip": false,
+
+    "on-click": "bash -c 'pactl set-source-mute @DEFAULT_SOURCE@ toggle'"
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // UPDATES
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "custom/updates": {
+    "format": "󱧕 {}",
+    "tooltip": true,
+    "interval": 43200,
+
+    "exec": "~/.config/waybar/scripts/checkupdates.sh",
+    "return-type": "json"
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // OPTIONAL / EXISTING MODULES
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  "tray": {
+    "spacing": 8
+  },
+
+  "custom/notifications": {
+    "format": "{} {icon}",
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+
+    "escape": true,
+    "tooltip": false,
+
+    "format-icons": {
+      "notification": "󱅫",
+      "dnd-notification": "󰂛",
+      "none": "󰂚",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󰂚",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰂛"
+    }
+  }
+}

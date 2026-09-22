@@ -1,0 +1,67 @@
+# ─────────────────────────────────────
+# FONT
+# ─────────────────────────────────────
+
+font-family = JetBrainsMono Nerd Font Propo
+font-size = 13
+font-thicken = true
+
+
+# ─────────────────────────────────────
+# TERMINAL
+# ─────────────────────────────────────
+
+term = tmux-256color
+command = /usr/bin/zsh -l
+
+cursor-style = bar
+cursor-style-blink = false
+
+mouse-hide-while-typing = true
+focus-follows-mouse = true
+
+scrollback-limit = 10000
+copy-on-select = clipboard
+
+
+# ─────────────────────────────────────
+# YOUR COLOR SCHEME
+# ─────────────────────────────────────
+
+background = #0B0A10
+foreground = #D9E0EE
+cursor-color = #D9E0EE
+
+selection-background = #6E6A86
+selection-foreground = #D9E0EE
+
+palette = 0=#1E1E2E
+palette = 1=#F28FAD
+palette = 2=#ABE9B3
+palette = 3=#F9E2AF
+palette = 4=#A7C7E7
+palette = 5=#F5BDE6
+palette = 6=#B5E8E0
+palette = 7=#D9E0EE
+
+palette = 8=#6E6A86
+palette = 9=#F28FAD
+palette = 10=#ABE9B3
+palette = 11=#F9E2AF
+palette = 12=#A7C7E7
+palette = 13=#F5BDE6
+palette = 14=#B5E8E0
+palette = 15=#C0CAF5
+
+
+# ─────────────────────────────────────
+# WINDOW
+# ─────────────────────────────────────
+
+window-padding-x = 10
+window-padding-y = 10
+
+background-opacity = 0.95
+background-blur-radius = 8
+
+confirm-close-surface = false

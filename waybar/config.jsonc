@@ -1,0 +1,35 @@
+{
+  "output": "HDMI-A-2",
+  "layer": "top",
+  "position": "top",
+  "margin": "6px 8px",
+  "fixed-center": true,
+  "reload_style_on_change": true,
+  "name": "overlay",
+  "passthrough": false,
+
+  "include": [
+    "~/.config/waybar/modules.jsonc"
+  ],
+
+  "modules-left": [
+    "custom/icon",
+    "hyprland/workspaces",
+    "hyprland/window",
+    "group/pc"
+  ],
+
+  "modules-center": [
+    "custom/music-prev",
+    "custom/playerlabel",
+    "custom/music-next"
+  ],
+
+  "modules-right": [
+    "group/system",
+    "custom/todo",
+    "custom/pomodoro",
+    "network#speed",
+    "clock"
+  ]
+}

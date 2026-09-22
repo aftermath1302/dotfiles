@@ -1,0 +1,305 @@
+@import "colors/colors.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 14px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* ─────────────────────────────────────────────
+   BAR
+   ───────────────────────────────────────────── */
+
+window#waybar {
+    background: alpha(@background, 0.92);
+
+    border: 1px solid alpha(@color4, 0.25);
+    border-radius: 12px;
+
+    color: @foreground;
+}
+
+/* ─────────────────────────────────────────────
+   GENERAL MODULE STYLE
+   ───────────────────────────────────────────── */
+
+#custom-icon,
+#workspaces,
+#window,
+#group-pc,
+#custom-music-prev,
+#custom-playerlabel,
+#custom-music-next,
+#group-system,
+#pulseaudio,
+#custom-pomodoro,
+#network,
+#clock,
+#custom-window-peek {
+    background: transparent;
+    color: @foreground;
+
+    margin: 0 2px;
+    padding: 3px 6px;
+}
+
+/* ─────────────────────────────────────────────
+   ARCH ICON
+   ───────────────────────────────────────────── */
+
+#custom-icon {
+    color: @color4;
+
+    padding-left: 18px;
+    padding-right: 10px;
+}
+
+#custom-icon:hover {
+    color: @color5;
+}
+
+/* ─────────────────────────────────────────────
+   WORKSPACES
+   ───────────────────────────────────────────── */
+
+#workspaces {
+    padding: 0 3px;
+}
+
+#workspaces button {
+    background: transparent;
+    color: alpha(@foreground, 0.35);
+
+    min-width: 10px;
+    margin: 3px 2px;
+    padding: 0 3px;
+
+    border-radius: 50%;
+}
+
+#workspaces button.active {
+    color: @color4;
+}
+
+#workspaces button:hover {
+    color: @color5;
+}
+
+#workspaces button.urgent {
+    color: @color1;
+}
+
+/* ─────────────────────────────────────────────
+   CURRENT WINDOW
+   ───────────────────────────────────────────── */
+
+#window {
+    color: @color15;
+
+    padding-left: 8px;
+    padding-right: 10px;
+
+    min-width: 80px;
+}
+
+/* ─────────────────────────────────────────────
+   PC DRAWER
+   ───────────────────────────────────────────── */
+
+#group-pc {
+    color: @color4;
+}
+
+#custom-pc-drawer {
+    color: @color4;
+    padding: 3px 7px;
+}
+
+#cpu,
+#memory,
+#disk,
+#custom-updates {
+    background: alpha(@color0, 0.55);
+
+    color: @foreground;
+
+    margin: 2px;
+    padding: 3px 7px;
+
+    border-radius: 8px;
+}
+
+#cpu {
+    color: @color2;
+}
+
+#memory {
+    color: @color4;
+}
+
+#disk {
+    color: @color5;
+}
+
+#custom-updates {
+    color: @color3;
+}
+
+/* ─────────────────────────────────────────────
+   MUSIC
+   ───────────────────────────────────────────── */
+
+#custom-music-prev,
+#custom-music-next {
+    color: alpha(@foreground, 0.35);
+
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#custom-music-prev:hover,
+#custom-music-next:hover {
+    color: @color5;
+}
+
+#custom-playerlabel {
+    color: @color15;
+
+    min-width: 120px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* ─────────────────────────────────────────────
+   SYSTEM DRAWER
+   ───────────────────────────────────────────── */
+
+#group-system {
+    color: @color4;
+}
+
+#custom-system-drawer {
+    color: @color4;
+    padding: 3px 7px;
+}
+
+#pulseaudio,
+#network,
+#bluetooth {
+    background: alpha(@color0, 0.55);
+
+    color: @foreground;
+
+    margin: 2px;
+    padding: 3px 7px;
+
+    border-radius: 8px;
+}
+
+#pulseaudio {
+    color: @color5;
+}
+
+#network {
+    color: @color4;
+}
+
+#bluetooth {
+    color: @color6;
+}
+
+/* ─────────────────────────────────────────────
+   MICROPHONE
+   ───────────────────────────────────────────── */
+
+#pulseaudio\.mic {
+    color: @color5;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* ─────────────────────────────────────────────
+   POMODORO / TODO
+   ───────────────────────────────────────────── */
+
+#custom-todo {
+    color: @color2;
+    padding: 3px 10px;
+    margin: 0 3px;
+}
+
+#custom-pomodoro {
+    color: @color1;
+    padding: 3px 10px;
+    margin: 0 3px;
+}
+
+/* ─────────────────────────────────────────────
+   INTERNET SPEED
+   ───────────────────────────────────────────── */
+
+#network\.speed {
+    color: @color6;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+/* ─────────────────────────────────────────────
+   CLOCK
+   ───────────────────────────────────────────── */
+
+#clock {
+    color: @color15;
+
+    padding-left: 8px;
+    padding-right: 18px;
+}
+
+/* ─────────────────────────────────────────────
+   WINDOW PEEK
+   ───────────────────────────────────────────── */
+
+#custom-window-peek {
+    color: alpha(@foreground, 0.45);
+
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#custom-window-peek:hover {
+    color: @color4;
+}
+
+/* ─────────────────────────────────────────────
+   TOOLTIP
+   ───────────────────────────────────────────── */
+
+tooltip {
+    background: alpha(@color0, 0.96);
+
+    border: 1px solid alpha(@color4, 0.35);
+    border-radius: 9px;
+
+    color: @foreground;
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+/* ─────────────────────────────────────────────
+   LEFT / CENTER / RIGHT SPACING
+   ───────────────────────────────────────────── */
+
+#modules-left {
+    margin-left: 10px;
+}
+
+#modules-right {
+    margin-right: 10px;
+}
