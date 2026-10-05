@@ -1,0 +1,62 @@
+    OpenRGB v1.0
+    Commit:  from 
+    Launched: 20261004_103706
+====================================================================================================
+
+[1         ][Info   ][ProfileManager] Found file: robo1.json attempting to validate header
+[1         ][Info   ][ProfileManager] Found file: robo.json attempting to validate header
+[2         ][Info   ][ProfileManager] Found file: robo1.json attempting to validate header
+[3         ][Info   ][ProfileManager] Found file: robo.json attempting to validate header
+[3         ][Info   ][NetworkClient] Connection attempt failed
+[56        ][Info   ]------------------------------------------------------
+[56        ][Info   ]|               Start device detection               |
+[56        ][Info   ]------------------------------------------------------
+[61        ][Info   ]------------------------------------------------------
+[61        ][Info   ]|             Detecting I2C interfaces               |
+[61        ][Info   ]------------------------------------------------------
+[61        ][Info   ][DetectionManager] Registering I2C interface: AMDGPU DM i2c hw bus 1 (/dev/i2c-3) Device 1002:164E Subsystem: 1458:D000
+[62        ][Info   ][DetectionManager] Registering I2C interface: NVIDIA i2c adapter 2 at 1:00.0 (/dev/i2c-10) Device 10DE:2705 Subsystem: 1458:413D
+[62        ][Info   ][DetectionManager] Registering I2C interface: Synopsys DesignWare I2C adapter (/dev/i2c-1) Device 0000:0000 Subsystem: 0000:0000
+[62        ][Info   ][DetectionManager] Registering I2C interface: SMBus PIIX4 adapter port 1 at 0b20 (/dev/i2c-17) Device 1022:790B Subsystem: 1458:5001
+[62        ][Info   ][i2c_smbus_linux] Failed to read i2c device PCI device ID
+[62        ][Info   ][DetectionManager] Registering I2C interface: AMDGPU DM aux hw bus 3 (/dev/i2c-8) Device 0000:0000 Subsystem: 0000:0000
+[62        ][Info   ][DetectionManager] Registering I2C interface: SMBus PIIX4 adapter port 0 at 0b00 (/dev/i2c-15) Device 1022:790B Subsystem: 1458:5001
+[62        ][Info   ][i2c_smbus_linux] Failed to read i2c device PCI device ID
+[62        ][Info   ][DetectionManager] Registering I2C interface: AMDGPU DM aux hw bus 1 (/dev/i2c-6) Device 0000:0000 Subsystem: 0000:0000
+[62        ][Info   ][DetectionManager] Registering I2C interface: NVIDIA i2c adapter 5 at 1:00.0 (/dev/i2c-13) Device 10DE:2705 Subsystem: 1458:413D
+[62        ][Info   ][DetectionManager] Registering I2C interface: AMDGPU DM i2c hw bus 2 (/dev/i2c-4) Device 1002:164E Subsystem: 1458:D000
+[62        ][Info   ][DetectionManager] Registering I2C interface: NVIDIA i2c adapter 3 at 1:00.0 (/dev/i2c-11) Device 10DE:2705 Subsystem: 1458:413D
+[62        ][Info   ][DetectionManager] Registering I2C interface: AMDGPU DM i2c hw bus 0 (/dev/i2c-2) Device 1002:164E Subsystem: 1458:D000
+[62        ][Info   ][DetectionManager] Registering I2C interface: Synopsys DesignWare I2C adapter (/dev/i2c-0) Device 0000:0000 Subsystem: 0000:0000
+[62        ][Info   ][DetectionManager] Registering I2C interface: NVIDIA i2c adapter 1 at 1:00.0 (/dev/i2c-9) Device 10DE:2705 Subsystem: 1458:413D
+[62        ][Info   ][DetectionManager] Registering I2C interface: SMBus PIIX4 adapter port 2 at 0b00 (/dev/i2c-16) Device 1022:790B Subsystem: 1458:5001
+[62        ][Info   ][i2c_smbus_linux] Failed to read i2c device PCI device ID
+[62        ][Info   ][DetectionManager] Registering I2C interface: AMDGPU DM aux hw bus 2 (/dev/i2c-7) Device 0000:0000 Subsystem: 0000:0000
+[62        ][Info   ][DetectionManager] Registering I2C interface: NVIDIA i2c adapter 6 at 1:00.0 (/dev/i2c-14) Device 10DE:2705 Subsystem: 1458:413D
+[62        ][Info   ][DetectionManager] Registering I2C interface: AMDGPU DM i2c hw bus 3 (/dev/i2c-5) Device 1002:164E Subsystem: 1458:D000
+[62        ][Info   ][DetectionManager] Registering I2C interface: NVIDIA i2c adapter 4 at 1:00.0 (/dev/i2c-12) Device 10DE:2705 Subsystem: 1458:413D
+[62        ][Info   ]------------------------------------------------------
+[62        ][Info   ]|               Detecting I2C devices                |
+[62        ][Info   ]------------------------------------------------------
+[405       ][Info   ][DetectionManager] Registering RGB controller ENE DRAM
+[986       ][Info   ]------------------------------------------------------
+[986       ][Info   ]|            Detecting I2C DRAM modules              |
+[986       ][Info   ]------------------------------------------------------
+[2073      ][Info   ][DetectionManager] Detected occupied slot 4, bus 5, type DDR5
+[2149      ][Info   ]------------------------------------------------------
+[2149      ][Info   ]|               Detecting I2C PCI devices            |
+[2149      ][Info   ]------------------------------------------------------
+[2151      ][Info   ]------------------------------------------------------
+[2151      ][Info   ]|               Detecting HID devices                |
+[2151      ][Info   ]------------------------------------------------------
+[2300      ][Info   ][DetectionManager] Registering RGB controller B650M D3HP AX
+[2301      ][Info   ]------------------------------------------------------
+[2301      ][Info   ]|            Detecting libusb HID devices            |
+[2301      ][Info   ]------------------------------------------------------
+[2321      ][Info   ]------------------------------------------------------
+[2321      ][Info   ]|              Detecting other devices               |
+[2321      ][Info   ]------------------------------------------------------
+[2343      ][Info   ]------------------------------------------------------
+[2343      ][Info   ]|                Detection completed                 |
+[2343      ][Info   ]------------------------------------------------------
+[4980      ][Info   ][DetectionManager] Cleaning up detected devices

@@ -1,0 +1,35 @@
+add_newline = false
+
+format = "$character"
+right_format = "$directory ✦ $git_branch ✦ $cmd_duration"
+
+[character]
+success_symbol = "[»](#f5c2e7)"
+error_symbol = "[»](#f5c2e7)"
+vicmd_symbol = "[«](#f38ba8)"
+
+[directory]
+style = "#6c7086"
+format = "[$path]($style)"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+symbol = ""
+style = "#a6e3a1"
+format = "[$symbol$branch]($style)"
+
+[git_status]
+style = "#f9e2af"
+disabled = false
+format = "[✿ $symbol$branch]($style)"
+
+[cmd_duration]
+min_time = 2000
+format = "[zzz $duration]($style)"
+style = "#fab387"
+
+[username]
+show_always = false
+style_user = "#585b70"
+format = "[$user]($style)"
