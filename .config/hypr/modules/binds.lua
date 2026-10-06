@@ -6,6 +6,7 @@
 local terminal    = "ghostty"
 local fileManager = "thunar"
 local menu        = "rofi -show drun"
+local lock        = "hyprlock"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -22,18 +23,19 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lock))
 
--- Move focus with SUPER + J K L ;
-hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
-hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + semicolon", hl.dsp.focus({ direction = "left" }))
+-- Move focus with SUPER + DOWN/UP/RIGHT/LEFT
+hl.bind(mainMod .. " + DOWN",  hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + UP",    hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + RIGHT", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + LEFT",  hl.dsp.focus({ direction = "left" }))
 
--- Move windows with SUPER + SHIFT + J K L ;
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + semicolon", hl.dsp.window.move({ direction = "left" }))
+-- Move windows with SUPER + SHIFT + DOWN/UP/RIGHT/LEFT
+hl.bind(mainMod .. " + SHIFT + DOWN",  hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + UP",    hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + RIGHT", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + LEFT",  hl.dsp.window.move({ direction = "left" }))
 
 -- Switch workspaces with SUPER + [0-9]
 -- Move active window to a workspace with SUPER + SHIFT + [0-9]

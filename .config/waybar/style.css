@@ -1,4 +1,4 @@
-@import "colors/colors.css";
+@import "../themes/robo-purple/colors.css";
 
 * {
     font-family: "JetBrainsMono Nerd Font Propo";

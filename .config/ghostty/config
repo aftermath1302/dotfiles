@@ -23,7 +23,6 @@ focus-follows-mouse = true
 scrollback-limit = 10000
 copy-on-select = clipboard
 
-
 # ─────────────────────────────────────
 # YOUR COLOR SCHEME
 # ─────────────────────────────────────
@@ -52,7 +51,6 @@ palette = 12=#A7C7E7
 palette = 13=#F5BDE6
 palette = 14=#B5E8E0
 palette = 15=#C0CAF5
-
 
 # ─────────────────────────────────────
 # WINDOW

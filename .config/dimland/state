@@ -1,0 +1,5 @@
+declare -- ALPHA="0.05"
+declare -- ALPHA_ALT="0.45"
+declare -- OPAQUE_COUNTER="0"
+declare -- RADIUS="6"
+declare -- STEP="0.05"
