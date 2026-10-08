@@ -1,0 +1,21 @@
+#!/bin/bash
+
+THEMES_DIR="$HOME/.config/themes"
+
+themes=()
+
+for dir in "$THEMES_DIR"/*/; do
+    [ -d "$dir" ] || continue
+
+    name="$(basename "$dir")"
+
+    [ "$name" = "current" ] && continue
+
+    themes+=("$name")
+done
+
+theme=$(printf '%s\n' "${themes[@]}" | sort | rofi -dmenu -i -p "Theme")
+
+[ -z "$theme" ] && exit 0
+
+"$THEMES_DIR/theme-switcher" "$theme"

@@ -1,0 +1,77 @@
+#!/bin/bash
+
+THEMES_DIR="$HOME/.config/themes"
+CURRENT="$THEMES_DIR/current"
+
+theme="$1"
+
+# -------------------------
+# Usage
+# -------------------------
+
+if [ -z "$theme" ]; then
+    echo "Usage: theme-switcher <theme>"
+    echo
+    echo "Available themes:"
+    find "$THEMES_DIR" -mindepth 1 -maxdepth 1 -type d \
+        -printf '%f\n' | sort
+    exit 1
+fi
+
+# -------------------------
+# Check theme
+# -------------------------
+
+THEME_DIR="$THEMES_DIR/$theme"
+
+if [ ! -d "$THEME_DIR" ]; then
+    echo "Theme '$theme' not found."
+    exit 1
+fi
+
+# -------------------------
+# Switch theme
+# -------------------------
+
+ln -sfn "$THEME_DIR" "$CURRENT"
+
+# -------------------------
+# Wallpaper
+# -------------------------
+
+if [ -f "$THEME_DIR/wallpaper" ]; then
+    WALLPAPER="$(cat "$THEME_DIR/wallpaper")"
+
+    if [ -f "$WALLPAPER" ]; then
+        ln -sfn "$WALLPAPER" "$HOME/.current_wallpaper"
+        awww img "$WALLPAPER" \
+            --transition-type wipe \
+            --transition-duration 1 \
+            --transition-angle 45
+    else
+        echo "Warning: wallpaper not found: $WALLPAPER"
+    fi
+else
+    echo "Warning: no wallpaper file found for $theme"
+fi
+
+# -------------------------
+# Reload Hyprland
+# -------------------------
+
+hyprctl reload
+
+# -------------------------
+# Reload Waybar
+# -------------------------
+
+killall -SIGUSR2 waybar
+
+# -------------------------
+# Reload SwayNC
+# -------------------------
+
+swaync-client -R 2>/dev/null
+
+echo
+echo "Theme switched to: $theme"

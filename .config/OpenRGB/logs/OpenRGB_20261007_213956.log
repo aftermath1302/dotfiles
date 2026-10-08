@@ -1,6 +1,6 @@
     OpenRGB v1.0
     Commit:  from 
-    Launched: 20260930_092625
+    Launched: 20261007_213956
 ====================================================================================================
 
 [1         ][Info   ][ProfileManager] Found file: robo1.json attempting to validate header
@@ -38,25 +38,25 @@
 [62        ][Info   ]------------------------------------------------------
 [62        ][Info   ]|               Detecting I2C devices                |
 [62        ][Info   ]------------------------------------------------------
-[403       ][Info   ][DetectionManager] Registering RGB controller ENE DRAM
-[978       ][Info   ]------------------------------------------------------
-[978       ][Info   ]|            Detecting I2C DRAM modules              |
-[978       ][Info   ]------------------------------------------------------
-[2039      ][Info   ][DetectionManager] Detected occupied slot 4, bus 5, type DDR5
-[2115      ][Info   ]------------------------------------------------------
-[2115      ][Info   ]|               Detecting I2C PCI devices            |
-[2115      ][Info   ]------------------------------------------------------
-[2116      ][Info   ]------------------------------------------------------
-[2116      ][Info   ]|               Detecting HID devices                |
-[2116      ][Info   ]------------------------------------------------------
-[2263      ][Info   ][DetectionManager] Registering RGB controller B650M D3HP AX
-[2264      ][Info   ]------------------------------------------------------
-[2264      ][Info   ]|            Detecting libusb HID devices            |
-[2264      ][Info   ]------------------------------------------------------
-[2286      ][Info   ]------------------------------------------------------
-[2286      ][Info   ]|              Detecting other devices               |
-[2286      ][Info   ]------------------------------------------------------
+[406       ][Info   ][DetectionManager] Registering RGB controller ENE DRAM
+[988       ][Info   ]------------------------------------------------------
+[988       ][Info   ]|            Detecting I2C DRAM modules              |
+[988       ][Info   ]------------------------------------------------------
+[2078      ][Info   ][DetectionManager] Detected occupied slot 4, bus 5, type DDR5
+[2154      ][Info   ]------------------------------------------------------
+[2154      ][Info   ]|               Detecting I2C PCI devices            |
+[2154      ][Info   ]------------------------------------------------------
+[2156      ][Info   ]------------------------------------------------------
+[2156      ][Info   ]|               Detecting HID devices                |
+[2156      ][Info   ]------------------------------------------------------
+[2307      ][Info   ][DetectionManager] Registering RGB controller B650M D3HP AX
 [2308      ][Info   ]------------------------------------------------------
-[2308      ][Info   ]|                Detection completed                 |
+[2308      ][Info   ]|            Detecting libusb HID devices            |
 [2308      ][Info   ]------------------------------------------------------
-[5668      ][Info   ][DetectionManager] Cleaning up detected devices
+[2329      ][Info   ]------------------------------------------------------
+[2329      ][Info   ]|              Detecting other devices               |
+[2329      ][Info   ]------------------------------------------------------
+[2350      ][Info   ]------------------------------------------------------
+[2350      ][Info   ]|                Detection completed                 |
+[2350      ][Info   ]------------------------------------------------------
+[10453     ][Info   ][DetectionManager] Cleaning up detected devices

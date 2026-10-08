@@ -1,6 +1,6 @@
 // vim: fdm=marker
 
-@import "../themes/robo-purple/colors.rasi"
+@import "../themes/current/colors.rasi"
 
 configuration {
   modes: "drun,ssh";

@@ -3,16 +3,23 @@
 -----------------------
 
 -- Refer to [https://wiki.hypr.land/Configuring/Basics/Variables/](https://wiki.hypr.land/Configuring/Basics/Variables/)
+local theme = dofile(os.getenv("HOME") .. "/.config/themes/current/theme.lua")
 hl.config({
     general = {
         gaps_in  = 5,
         gaps_out = 5,
-
         border_size = 0,
 
         col = {
-            active_border   = { colors = {"rgba(89b4faff)", "rgba(cba6f7ff)"}, angle = 45 },
-            inactive_border = "rgba(45475aaa)",
+            active_border = {
+                colors = {
+                    theme.active_border_1,
+                    theme.active_border_2
+                },
+                angle = 45
+            },
+
+            inactive_border = theme.inactive_border,
         },
 
         -- Set to true to enable resizing windows by clicking and dragging on borders and gaps

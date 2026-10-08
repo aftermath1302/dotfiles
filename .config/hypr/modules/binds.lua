@@ -23,6 +23,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("~/.config/themes/theme-menu"))
 
 -- Move focus with SUPER + DOWN/UP/RIGHT/LEFT
 hl.bind(mainMod .. " + DOWN",  hl.dsp.focus({ direction = "down" }))

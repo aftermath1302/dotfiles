@@ -1,8 +1,3 @@
-✗ swaync
 waydroid
-✗ blur
-theme switcher
-shutdown reboot lock
 add switch openrgb using wallpaper
-✗ screenshot
-✗ stow
+✗ rofi selector for theme 

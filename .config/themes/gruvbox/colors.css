@@ -1,0 +1,114 @@
+/* ============================================================
+
+   GRUVBOX DARK — CENTRALIZED COLOR THEME
+
+   ============================================================ */
+
+
+/* ------------------------------------------------------------
+
+   BASE
+
+   ------------------------------------------------------------ */
+
+@define-color background #282828;
+
+@define-color background-alt #1D2021;
+
+@define-color surface #3C3836;
+
+@define-color surface-alt #504945;
+
+@define-color foreground #EBDBB2;
+
+@define-color foreground-muted #A89984;
+
+@define-color cursor #FABD2F;
+
+
+/* ------------------------------------------------------------
+
+   PRIMARY ACCENTS
+
+   ------------------------------------------------------------ */
+
+@define-color accent #FABD2F;
+
+@define-color accent-hover #D79921;
+
+@define-color accent-active #B57614;
+
+@define-color purple #D3869B;
+
+@define-color pink #D3869B;
+
+@define-color blue #83A598;
+
+@define-color teal #8EC07C;
+
+
+/* ------------------------------------------------------------
+
+   SEMANTIC COLORS
+
+   ------------------------------------------------------------ */
+
+@define-color success #B8BB26;
+
+@define-color warning #FABD2F;
+
+@define-color critical #FB4934;
+
+@define-color info #83A598;
+
+
+/* ------------------------------------------------------------
+
+   BORDERS
+
+   ------------------------------------------------------------ */
+
+@define-color border #504945;
+
+@define-color border-subtle #3C3836;
+
+@define-color border-active #FABD2F;
+
+
+/* ------------------------------------------------------------
+
+   STANDARD TERMINAL PALETTE
+
+   ------------------------------------------------------------ */
+
+@define-color color0  #282828;
+
+@define-color color1  #CC241D;
+
+@define-color color2  #98971A;
+
+@define-color color3  #D79921;
+
+@define-color color4  #458588;
+
+@define-color color5  #B16286;
+
+@define-color color6  #689D6A;
+
+@define-color color7  #A89984;
+
+@define-color color8  #928374;
+
+@define-color color9  #FB4934;
+
+@define-color color10 #B8BB26;
+
+@define-color color11 #FABD2F;
+
+@define-color color12 #83A598;
+
+@define-color color13 #D3869B;
+
+@define-color color14 #8EC07C;
+
+@define-color color15 #EBDBB2;
